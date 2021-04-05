@@ -1,4 +1,5 @@
 #include "Gene.h"
+#include <sstream>
 
 Gene::Gene()
 {
@@ -31,4 +32,11 @@ std::string Gene::getName()
 std::string Gene::getSequence()
 {
 	return this->sequence;
+}
+
+std::string Gene::ToString()
+{
+	std::stringstream buffer;
+	buffer << "Organism: " << this->organism << "; Name: " << this->name << "; Sequence: " << this->sequence << '\n';
+	return buffer.str();
 }

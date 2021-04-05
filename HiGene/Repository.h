@@ -6,6 +6,7 @@ class Repository
 {
 private:
 	Gene repo_genes[201];
+	int nrElem;
 
 public:
 	// Constructor
@@ -15,6 +16,9 @@ public:
 	~Repository();
 
 	void add(Gene g);
-	void geneExists(Gene g);
-
+	bool geneExists(Gene g);
+	Gene* getAllGenes();
+	int filterBySequence(std::string sequence, Gene* filteredGenes);
+	int getNrGenes();
+	std::string getSeq(std::string organism, std::string name);
 };

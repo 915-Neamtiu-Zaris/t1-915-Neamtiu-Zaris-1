@@ -27,4 +27,7 @@ public:
 
 	// Sequence getter
 	std::string getSequence();
+
+	// To-String method
+	std::string ToString();
 };
